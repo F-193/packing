@@ -1,0 +1,56 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><title>Eleven cubes in a cube: side 2.881711124831</title>
+<meta name="description" content="Eleven cubes in a cube, side 2.881711124831"><link rel="stylesheet" href="assets/site.css">
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+"three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}</script>
+<script>try{const t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+</head><body><nav><div class="wrap"><a class="brand" href="index.html">Packing records</a>
+<span class="sp"></span><button id="theme" title="Light or dark">◐</button></div></nav>
+<div class="wrap">
+<header class="hero"><div class="eyebrow">cubes in a cube · n = 11</div>
+<h1>Eleven cubes in a cube, side 2.881711</h1>
+<p class="lede">Eleven cubes of side 1 fit in a cube of side 2.881711124831.
+This beats the published record.</p></header>
+
+<div class="verdict">
+  <div class="figure"><canvas id="fig"></canvas><p class="cap">Drag to rotate. The dashed outline is the previous record's container.</p></div>
+  <div class="ledger">
+    <div class="winner"><div class="trophy">★</div><div class="who">Frank R</div></div>
+    <dl>
+      <dt>Frank R's record</dt><dd class="big">2.881711124831</dd>
+      <dt>Previous record</dt><dd>2.88295+<small>Haowei Lin, July 2026 · published value truncated</small></dd>
+      <dt>Improvement</dt><dd>≥ 0.001238875169</dd>
+      <dt>Minimum gap</dt><dd>2.38 × 10<sup>-13</sup><small>smallest distance between any two cubes</small></dd>
+      <dt>Random starts</dt><dd>2,048</dd>
+      <dt>Verified</dt><dd>yes, independently</dd>
+    </dl>
+    <div class="claim"><a class="btn primary" href="data/3d_n11.json" download>Coordinates (JSON)</a>
+      <a class="btn" href="https://erich-friedman.github.io/packing/cubincub/" rel="noopener">Record table</a></div>
+  </div>
+</div>
+
+<section><h2>Coordinates</h2>
+<p class="note">Container [0, 2.881711124831]<sup>3</sup>. Each cube has side 1;
+its orientation is a unit quaternion (w, x, y, z); corners are center + R(q)·(±½, ±½, ±½).
+All values to 12 decimals. <a href="data/3d_n11.json" download>Download JSON</a> · <a href="#" id="copyjson">copy</a></p>
+<div class="tablewrap"><table><tr><th>#</th><th>x</th><th>y</th><th>z</th><th>q<sub>w</sub></th><th>q<sub>x</sub></th><th>q<sub>y</sub></th><th>q<sub>z</sub></th></tr><tr><td>1</td><td>1.273046358118</td><td>1.508241529006</td><td>0.681575781041</td><td>-0.222906668689</td><td>0.470072808322</td><td>0.844965213525</td><td>0.124007902417</td></tr><tr><td>2</td><td>2.212719717887</td><td>2.381711124831</td><td>0.500000000000</td><td>0.500000000000</td><td>-0.500000000000</td><td>-0.500000000000</td><td>-0.500000000000</td></tr><tr><td>3</td><td>0.500000000000</td><td>0.500000000000</td><td>0.715222073213</td><td>-0.500000000000</td><td>0.500000000000</td><td>-0.500000000000</td><td>0.500000000000</td></tr><tr><td>4</td><td>2.338279656572</td><td>0.529292103055</td><td>0.528407851783</td><td>0.501951808625</td><td>0.495131908778</td><td>-0.504673513406</td><td>-0.498190144015</td></tr><tr><td>5</td><td>0.500000000001</td><td>1.381711124830</td><td>2.381711124831</td><td>0.707106781186</td><td>0.000000000000</td><td>0.000000000000</td><td>-0.707106781187</td></tr><tr><td>6</td><td>2.381711124831</td><td>0.523076430345</td><td>2.381711124831</td><td>0.500000000000</td><td>0.500000000000</td><td>0.500000000000</td><td>0.500000000000</td></tr><tr><td>7</td><td>0.500000000000</td><td>2.381711124831</td><td>2.381711124831</td><td>-0.500000000000</td><td>0.500000000000</td><td>-0.500000000000</td><td>0.500000000000</td></tr><tr><td>8</td><td>1.500000000001</td><td>2.381711124831</td><td>2.381711124831</td><td>-0.500000000000</td><td>-0.500000000000</td><td>0.500000000000</td><td>0.500000000000</td></tr><tr><td>9</td><td>2.200135343791</td><td>1.608664766715</td><td>1.508241529011</td><td>0.509793803631</td><td>0.490010487418</td><td>-0.685167461070</td><td>-0.174772853418</td></tr><tr><td>10</td><td>0.500000000002</td><td>2.381711124831</td><td>1.381711124829</td><td>0.000000000000</td><td>0.707106781186</td><td>0.707106781187</td><td>0.000000000000</td></tr><tr><td>11</td><td>1.373469595822</td><td>0.681575781039</td><td>1.608664766717</td><td>-0.013988917052</td><td>0.360903488153</td><td>0.706968394060</td><td>0.608069627789</td></tr></table></div>
+<pre class="json" id="jsonview"></pre></section>
+
+<section><h2>Checks</h2><div class="checks"><div class="check"><b>-1.95 × 10<sup>-13</sup></b><span><em>Separating planes</em>: worst LP margin over all close pairs (≥ 0: no overlap)</span></div><div class="check"><b>2.881711124831</b><span><em>Bounding box</em>: side of the smallest axis-aligned cube around all corners</span></div></div></section>
+</div>
+
+<script type="module">
+const DATA = {"d": 3, "n": 11, "L": 2.881711124831479, "centers": [[1.2730463581175946, 1.508241529006131, 0.6815757810407972], [2.212719717887173, 2.3817111248314475, 0.5000000000002208], [0.5000000000000991, 0.500000000000205, 0.7152220732130512], [2.338279656571535, 0.5292921030551659, 0.5284078517825129], [0.5000000000007391, 1.381711124829918, 2.381711124831463], [2.3817111248309684, 0.5230764303451481, 2.381711124831463], [0.5000000000000991, 2.3817111248314475, 2.381711124831463], [1.5000000000009885, 2.3817111248314475, 2.381711124831463], [2.2001353437914, 1.608664766715377, 1.508241529010955], [0.5000000000021178, 2.381711124830823, 1.3817111248292937], [1.373469595822304, 0.6815757810394572, 1.6086647667167737]], "orientation": [[-0.22290666868930686, 0.47007280832233944, 0.8449652135253157, 0.12400790241715377], [0.5, -0.5, -0.49999999999999994, -0.5000000000000001], [-0.5, 0.5, -0.5, 0.5], [0.5019518086253847, 0.49513190877840163, -0.5046735134056698, -0.49819014401525363], [0.707106781186095, 0.0, 0.0, -0.707106781187], [0.500000000000203, 0.5000000000002031, 0.49999999999979705, 0.49999999999979705], [-0.5, 0.5, -0.5, 0.5], [-0.5, -0.5, 0.5, 0.5], [0.5097938036306399, 0.49001048741782177, -0.6851674610696379, -0.17477285341762805], [3.53270803204522e-14, 0.7071067811860838, 0.7071067811870112, 3.532708032036177e-14], [-0.013988917051939056, 0.360903488153259, 0.7069683940597448, 0.6080696277887178]], "prev": 2.88295};
+const JSON_URL = "data/3d_n11.json";
+import { CubeView } from "./assets/cube3d.js"; new CubeView(document.getElementById("fig"), {interactive: true, spin: true}).set({centers: DATA.centers.map(c => c.map(v => v - DATA.L / 2)), quats: DATA.orientation, L: DATA.L, prev: DATA.prev});
+fetch(JSON_URL).then(r => r.text()).then(t => document.getElementById('jsonview').textContent = t)
+  .catch(() => document.getElementById('jsonview').textContent = 'Open this page from a web server (for example GitHub Pages) to preview the JSON here.');
+document.getElementById('copyjson').onclick = e => { e.preventDefault(); navigator.clipboard.writeText(document.getElementById('jsonview').textContent); };
+</script><footer><div class="wrap">Results by Frank R. Every packing on this site was certified in exact separating-axis
+geometry and independently re-checked with a linear program, and polygon clipping for squares.
+Records are compared with the tables maintained at <a href="https://kingbird.myphotos.cc/packing/squares_in_squares.html">Squares in Squares</a> and
+<a href="https://erich-friedman.github.io/packing/cubincub/">Cubes in Cubes</a>. Built 09 October 2026.</div></footer>
+<script>document.getElementById('theme').onclick=()=>{const r=document.documentElement,
+dark=matchMedia('(prefers-color-scheme: dark)').matches,now=r.dataset.theme||(dark?'dark':'light');
+r.dataset.theme=now==='dark'?'light':'dark';try{localStorage.setItem('theme',r.dataset.theme)}catch(e){}
+dispatchEvent(new Event('resize'));};</script></body></html>

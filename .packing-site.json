@@ -1,0 +1,11 @@
+{
+ "files": [
+  "index.html",
+  "assets/site.css",
+  "assets/cube3d.js",
+  ".nojekyll",
+  "3d_n11.html",
+  "data/3d_n11.json"
+ ],
+ "built": "2026-10-09 01:23"
+}

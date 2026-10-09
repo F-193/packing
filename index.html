@@ -1,0 +1,27 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><title>Packing records</title>
+<meta name="description" content="Unit squares and cubes, packed by letting soft blobs harden into rigid bodies."><link rel="stylesheet" href="assets/site.css">
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+"three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}</script>
+<script>try{const t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+</head><body><nav><div class="wrap"><a class="brand" href="index.html">Packing records</a>
+<span class="sp"></span><button id="theme" title="Light or dark">◐</button></div></nav>
+<div class="wrap"><header class="hero"><div class="eyebrow">1 result · 1 new record</div>
+<h1>Packing records</h1><p class="lede">Unit squares and cubes, packed by letting soft blobs harden into rigid bodies.</p></header>
+<div class="cards"><a class="card" href="3d_n11.html"><div class="thumb"><canvas data-key="3d_n11"></canvas></div><div class="body">
+<span class="tag new">new record</span><span class="tag above">3D</span>
+<h3>Eleven cubes</h3><div class="kv">side <b>2.881711124831</b></div>
+<div class="kv">previous <b>2.88295+</b></div>
+<div class="kv">improvement <b>≥ 0.001238875169</b></div></div></a></div>
+<p class="note">2,048 random starts in total across these results. Each page lists the coordinates and the checks.</p></div>
+<script type="module">import { CubeView } from "./assets/cube3d.js";
+const CUBES = {"3d_n11": {"d": 3, "n": 11, "L": 2.881711124831479, "centers": [[1.2730463581175946, 1.508241529006131, 0.6815757810407972], [2.212719717887173, 2.3817111248314475, 0.5000000000002208], [0.5000000000000991, 0.500000000000205, 0.7152220732130512], [2.338279656571535, 0.5292921030551659, 0.5284078517825129], [0.5000000000007391, 1.381711124829918, 2.381711124831463], [2.3817111248309684, 0.5230764303451481, 2.381711124831463], [0.5000000000000991, 2.3817111248314475, 2.381711124831463], [1.5000000000009885, 2.3817111248314475, 2.381711124831463], [2.2001353437914, 1.608664766715377, 1.508241529010955], [0.5000000000021178, 2.381711124830823, 1.3817111248292937], [1.373469595822304, 0.6815757810394572, 1.6086647667167737]], "orientation": [[-0.22290666868930686, 0.47007280832233944, 0.8449652135253157, 0.12400790241715377], [0.5, -0.5, -0.49999999999999994, -0.5000000000000001], [-0.5, 0.5, -0.5, 0.5], [0.5019518086253847, 0.49513190877840163, -0.5046735134056698, -0.49819014401525363], [0.707106781186095, 0.0, 0.0, -0.707106781187], [0.500000000000203, 0.5000000000002031, 0.49999999999979705, 0.49999999999979705], [-0.5, 0.5, -0.5, 0.5], [-0.5, -0.5, 0.5, 0.5], [0.5097938036306399, 0.49001048741782177, -0.6851674610696379, -0.17477285341762805], [3.53270803204522e-14, 0.7071067811860838, 0.7071067811870112, 3.532708032036177e-14], [-0.013988917051939056, 0.360903488153259, 0.7069683940597448, 0.6080696277887178]], "prev": 2.88295}};
+document.querySelectorAll('canvas[data-key]').forEach(cv => { const D = CUBES[cv.dataset.key];
+  new CubeView(cv, {spin: true}).set({centers: D.centers.map(c => c.map(v => v - D.L / 2)), quats: D.orientation, L: D.L, prev: D.prev}); });</script><footer><div class="wrap">Results by Frank R. Every packing on this site was certified in exact separating-axis
+geometry and independently re-checked with a linear program, and polygon clipping for squares.
+Records are compared with the tables maintained at <a href="https://kingbird.myphotos.cc/packing/squares_in_squares.html">Squares in Squares</a> and
+<a href="https://erich-friedman.github.io/packing/cubincub/">Cubes in Cubes</a>. Built 09 October 2026.</div></footer>
+<script>document.getElementById('theme').onclick=()=>{const r=document.documentElement,
+dark=matchMedia('(prefers-color-scheme: dark)').matches,now=r.dataset.theme||(dark?'dark':'light');
+r.dataset.theme=now==='dark'?'light':'dark';try{localStorage.setItem('theme',r.dataset.theme)}catch(e){}
+dispatchEvent(new Event('resize'));};</script></body></html>
